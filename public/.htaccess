@@ -1,0 +1,6 @@
+RewriteEngine On
+RewriteCond %{THE_REQUEST} /alc-streamersland\.com/index\.html
+RewriteRule ^ /login [R=302,L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^ index.html [QSA,L]
