@@ -1,0 +1,21 @@
+current directory: /Users/kobayashihiroshi/Desktop/portfori/testapp/vendor/bundle/ruby/3.2.0/gems/strscan-3.1.0/ext/strscan
+/Users/kobayashihiroshi/.rbenv/versions/3.2.5/bin/ruby extconf.rb
+checking for onig_region_memsize() in ruby.h... yes
+checking for rb_reg_onig_match() in ruby.h... no
+creating Makefile
+
+current directory: /Users/kobayashihiroshi/Desktop/portfori/testapp/vendor/bundle/ruby/3.2.0/gems/strscan-3.1.0/ext/strscan
+make DESTDIR\= sitearchdir\=./.gem.20241103-38053-wt3fk5 sitelibdir\=./.gem.20241103-38053-wt3fk5 clean
+
+current directory: /Users/kobayashihiroshi/Desktop/portfori/testapp/vendor/bundle/ruby/3.2.0/gems/strscan-3.1.0/ext/strscan
+make DESTDIR\= sitearchdir\=./.gem.20241103-38053-wt3fk5 sitelibdir\=./.gem.20241103-38053-wt3fk5
+compiling strscan.c
+linking shared-object strscan.bundle
+ld: warning: ignoring duplicate libraries: '-lruby.3.2'
+
+current directory: /Users/kobayashihiroshi/Desktop/portfori/testapp/vendor/bundle/ruby/3.2.0/gems/strscan-3.1.0/ext/strscan
+make DESTDIR\= sitearchdir\=./.gem.20241103-38053-wt3fk5 sitelibdir\=./.gem.20241103-38053-wt3fk5 install
+/usr/bin/install -c -m 0755 strscan.bundle ./.gem.20241103-38053-wt3fk5
+
+current directory: /Users/kobayashihiroshi/Desktop/portfori/testapp/vendor/bundle/ruby/3.2.0/gems/strscan-3.1.0/ext/strscan
+make DESTDIR\= sitearchdir\=./.gem.20241103-38053-wt3fk5 sitelibdir\=./.gem.20241103-38053-wt3fk5 clean
