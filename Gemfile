@@ -5,6 +5,10 @@ ruby "3.2.5"
 gem 'rails_12factor', group: :production
 gem 'sqlite3', group: [:development, :test]
 gem 'pg', '~> 1.4', group: :production
+group :production do
+  gem 'rails_12factor'
+end
+
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.1.3", ">= 7.1.3.4"
