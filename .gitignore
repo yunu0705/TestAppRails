@@ -1,0 +1,27 @@
+# Logs
+/log/*.log
+/tmp
+!/log/.keep
+
+# Ignore bundler config.
+/.bundle
+
+# Ignore the master key.
+/config/master.key
+
+# Ignore all node_modules folders
+/node_modules
+
+# Ignore all coverage folders
+/coverage
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore editor-specific files
+.idea/
+.vscode/
+
+# Ignore secret environment settings
+.env
