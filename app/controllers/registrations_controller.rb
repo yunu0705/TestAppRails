@@ -8,8 +8,13 @@ class RegistrationsController < ApplicationController
   def create
     user = User.new(user_params)
     if user.save
-      UserMailer.registration_confirmation(user).deliver_now  # メールを即時送信
-      render json: { message: 'User created successfully' }, status: :created
+      begin
+        UserMailer.registration_confirmation(user).deliver_now  # メールを即時送信
+        render json: { message: 'User created successfully' }, status: :created
+      rescue StandardError => e
+        user.destroy
+        render json: { errors: ["User created but failed to send confirmation email: #{e.message}"] }, status: :unprocessable_entity
+      end
     else
       render json: { errors: user.errors.full_messages }, status: :unprocessable_entity
     end
@@ -18,6 +23,6 @@ class RegistrationsController < ApplicationController
   private
 
   def user_params
-    params.require(:registration).permit(:landAccount_name, :landEmail_address, :password)
+    params.permit(:landAccount_name, :landEmail_address, :password)
   end  
 end

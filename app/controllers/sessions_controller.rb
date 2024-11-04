@@ -5,11 +5,10 @@ class SessionsController < ApplicationController
     user = User.find_by(landAccount_name: params[:landAccount_name])
     
     if user && user.authenticate(params[:password])
-      # ログイン成功時の処理
+      session[:user_id] = user.id # セッションにユーザーIDを保存
       render json: { message: 'ログイン成功', user_name: user.landAccount_name }, status: :ok
     else
-      # ログイン失敗時の処理
-      render json: { error: 'ログイン失敗' }, status: :unauthorized
+      render json: { error: 'ログイン失敗: ユーザー名またはパスワードが間違っています' }, status: :unauthorized
     end
   end
 
