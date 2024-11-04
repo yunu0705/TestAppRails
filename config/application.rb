@@ -17,7 +17,7 @@ module Testapp
     # CORS設定の追加
     config.middleware.insert_before 0, Rack::Cors do
       allow do
-        origins 'https://test-app-peche-c2666ebb3dc5.herokuapp.com'
+        origins 'https://test-app-peche-c2666ebb3dc5.herokuapp.com','https://alc-streamersland.com'
         resource '*',
           headers: :any,
           methods: [:get, :post, :put, :patch, :delete, :options, :head],
