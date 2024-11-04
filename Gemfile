@@ -3,6 +3,7 @@ source "https://rubygems.org"
 ruby "3.2.5"
 
 gem 'rails_12factor', group: :production
+gem 'rack-cors'
 gem 'sqlite3', group: [:development, :test]
 gem 'pg', '~> 1.4', group: :production
 group :production do
