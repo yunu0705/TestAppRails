@@ -14,11 +14,12 @@ class Api::NewsController < ApplicationController
   def create
     news = News.new(news_params)
     
-    if params[:image].present?
-      news.image.attach(params[:image])
-      puts "Image attached: #{news.image.attached?}"  # 画像が添付されたかどうかを確認
+    # params[:news][:image]で画像を取得
+    if params[:news] && params[:news][:image].present?
+      news.image.attach(params[:news][:image])
+      puts "Image attached: #{news.image.attached?}"  # デバッグ用
     else
-      puts "No image attached"  # 画像が添付されていない場合
+      puts "No image attached"  # デバッグ用
     end
   
     if news.save
@@ -29,6 +30,7 @@ class Api::NewsController < ApplicationController
       render json: { errors: news.errors.full_messages }, status: :unprocessable_entity
     end
   end
+  
 
   def destroy
     news = News.find_by(id: params[:id])
