@@ -1,5 +1,5 @@
 # 管理画面β版(TestAppRails)
-概要：本プロジェクトは、個人ストリーマー向けのオリジナルサイト作成パッケージの一環として、サイトの編集・管理を行うための管理画面です。
+概要：本プロジェクトは、個人ストリーマー向けのオリジナルサイト作成パッケージの一環として、  サイトの編集・管理を行うための管理画面です。
 
 
 This README would normally document whatever steps are necessary to get the
