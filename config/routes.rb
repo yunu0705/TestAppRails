@@ -27,4 +27,8 @@ Rails.application.routes.draw do
 
   # Root パスをReactのビューへ変更
   root 'home#index'  # Reactのメインエントリポイントをルートに設定
+  # その他のルート設定
+  post 'login', to: 'sessions#create'
+  delete 'logout', to: 'sessions#destroy'
+  get 'check_login', to: 'sessions#check_login'  # ログイン状態確認エンドポイント
 end
