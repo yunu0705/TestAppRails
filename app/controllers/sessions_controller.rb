@@ -17,9 +17,22 @@ class SessionsController < ApplicationController
     render json: { message: 'Logged out successfully' }, status: :ok
   end
 
+  # ログイン状態を確認するエンドポイント
+  def check_login
+    if session[:user_id] && current_user
+      render json: { logged_in: true, user_name: current_user.landAccount_name }, status: :ok
+    else
+      render json: { logged_in: false }, status: :unauthorized
+    end
+  end
+
   private
 
   def user_params
     params.permit(:landAccount_name, :password)
+  end
+
+  def current_user
+    @current_user ||= User.find_by(id: session[:user_id])
   end
 end
