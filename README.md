@@ -1,4 +1,4 @@
-# サイト管理画面α版(TestAppRails)  
+# サイト管理画面α版(Ruby on Rails)  
 ![イメージ](path/image01.png)  
 ![イメージ](path/image02.png)  
 ![イメージ](path/image03.png)  
